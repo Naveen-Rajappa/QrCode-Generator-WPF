@@ -1,0 +1,26 @@
+﻿<Window x:Class="Xamarin_Scanner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Xamarin_Scanner"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="0,40, 0, 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="QRText" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="5,0,0,0" Text="" />
+        <Image x:Name="QRCode" HorizontalAlignment="Left" Height="100" Margin="74,25,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Click="Generate_QRCode" Command="{Binding GenerateQR}" Content="Generate QRCode" Width="100" Height="20" Grid.Column="1" Grid.Row="2" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+    </Grid>
+
+   
+</Window>
